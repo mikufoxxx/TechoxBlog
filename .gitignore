@@ -31,3 +31,37 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### 敏感信息和密码文件 ###
+# 配置文件
+**/application-*.properties
+**/application-*.yml
+**/application.properties
+**/application.yml
+!**/application-example.properties
+!**/application-example.yml
+
+# 密钥和证书
+*.jks
+*.keystore
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+
+# 环境变量文件
+.env
+.env.*
+!.env.example
+
+# 日志文件（可能包含敏感信息）
+/logs/
+*.log
+
+# 其他可能包含敏感信息的文件
+secrets.json
+secrets.xml
+**/credentials.*
+**/password.*
